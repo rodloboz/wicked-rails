@@ -1,0 +1,7 @@
+<div class="container">
+  <%= simple_form_for @user, url: wizard_path, method: :put do |f| %>
+  <%=  f.input :about %>
+
+  <%= f.submit "Save" %>
+<% end %>
+</div>

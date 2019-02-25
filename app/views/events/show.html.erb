@@ -1,0 +1,9 @@
+<h1><%= @event.title %></h1>
+<p>Location: <%= @event.location %></p>
+<p>Description: <%= @event.description %></p>
+<h4>Categories:</h4>
+<ul>
+  <% @event.categories.each do |category| %>
+    <li><%= category.name %></li>
+  <% end %>
+</ul>

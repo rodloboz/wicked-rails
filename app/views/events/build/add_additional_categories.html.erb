@@ -1,0 +1,8 @@
+<div class="container">
+  <%= simple_form_for @event, url: wizard_path, method: :put do |f| %>
+
+    <%= f.association :categories, collection: Category.all[4, 6], as: :check_boxes, include_blank: false, include_hidden: false %>
+
+    <%= f.submit "Save" %>
+  <% end %>
+</div>

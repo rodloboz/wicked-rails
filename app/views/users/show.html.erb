@@ -1,0 +1,8 @@
+<div class="container">
+  <h1><%= @user.full_name %></h1>
+  <h4><%= @user.type %></h4>
+  <p>Address: <%= @user.address %><p>
+  <p>About: <%= @user.about %><p>
+
+  <%= link_to 'Create Event', events_path, method: :post %>
+</div>

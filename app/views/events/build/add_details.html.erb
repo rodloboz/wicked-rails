@@ -1,0 +1,10 @@
+<div class="container">
+  <%= simple_form_for @event, url: wizard_path, method: :put do |f| %>
+
+    <%= f.input :title %>
+    <%= f.input :location %>
+    <%= f.input :description %>
+
+    <%= f.submit "Save" %>
+  <% end %>
+</div>
