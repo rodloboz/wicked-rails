@@ -1,0 +1,8 @@
+<h1>Speeches#index</h1>
+<p>Find me in app/views/speeches/index.html.erb</p>
+
+<ul>
+  <% @speeches.each do |speech| %>
+    <li><%= link_to speech.title, speech_path(speech) %></li>
+  <% end %>
+</ul>

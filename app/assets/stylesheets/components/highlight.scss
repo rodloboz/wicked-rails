@@ -1,0 +1,89 @@
+.highlightedSelection {
+  background-color: transparent;
+  background-image: linear-gradient(to bottom,rgba(241,253,55,.5),rgba(241,253,55,.5));
+  // border-bottom: 3px dotted black;
+}
+
+.highlightMenu {
+  z-index: 500;
+  width: 120px;
+  height: 44px;
+  color: rgba(0,0,0,.84);
+  background-color: #2C2C2A;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.highlightMenu-inner {
+  position: relative;
+  height: 100%;
+  background-image: linear-gradient(to bottom,rgba(49,49,47,.99),#262625);
+  background-repeat: repeat-x;
+  border-radius: 5px;
+  padding: 0 10px;
+  color: white;
+}
+
+.highlightMenu-arrowClip {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  clip: rect(10px 20px 20px 0);
+  margin-left: -10px;
+}
+
+.highlightMenu-arrow {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #262625;
+    -webkit-transform: rotate(45deg) scale(.5);
+    transform: rotate(45deg) scale(.5);
+}
+.highlight-menu.active {
+  animation: pop-upwards 180ms forwards linear;
+}
+
+.highlight-tools {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  i {
+    margin: 0 5px;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+@keyframes pop-upwards {
+  0% {
+    transform: matrix(.97,0,0,1,0,12);
+    opacity: 0;
+  }
+
+  20% {
+    transform: matrix(.99,0,0,1,0,2);
+    opacity: .7;
+  }
+
+  40% {
+    transform: matrix(1,0,0,1,0,-1);
+    opacity: 1;
+  }
+
+  70% {
+    transform: matrix(1,0,0,1,0,0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: matrix(1,0,0,1,0,0);
+    opacity: 1;
+  }
+}

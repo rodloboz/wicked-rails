@@ -7,4 +7,8 @@ Rails.application.routes.draw do
     resources :design, controller: 'events/build'
   end
   resources :users, only: [:show]
+
+  resources :speeches, only: [:index, :show] do
+    resources :contributions, only: :create
+  end
 end

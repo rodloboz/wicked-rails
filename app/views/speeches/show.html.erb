@@ -1,0 +1,27 @@
+
+<div class="page-wrapper">
+  <div class="page-content">
+    <div class="speech-container">
+      <h1><%= @speech.title %></h1>
+      <div class="speech-body">
+        <%= @speech.content.html_safe %>
+      </div>
+    </div>
+  </div>
+
+  <div id="contributions">
+    <% if @speech.contributions.empty? %>
+      <div>No contributions yet.</div>
+    <% else %>
+      <%= render @speech.contributions %>
+    <% end %>
+    <%= simple_form_for [@speech, @contribution] do |f| %>
+      <%= f.input :selection_uui, as: :hidden %>
+      <%= f.input :paragraph, as: :hidden %>
+      <%= hidden_field_tag :speech_html %>
+      <%= f.input :content, input_html: { rows: 5 } %>
+
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
