@@ -18,11 +18,6 @@ function getPosition(options) {
   });
 };
 
-const getCurrentPosition = () => {
-  return navigator.geolocation.getCurrentPosition((response) => response)
-    .then(response => response.coords);
-}
-
 const fitMapToMarkers = (map, markers) => {
   const bounds = new mapboxgl.LngLatBounds();
   markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
