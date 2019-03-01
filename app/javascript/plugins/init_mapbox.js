@@ -66,7 +66,6 @@ const initMapbox = () => {
           .then((position) => {
             console.log(position);
             const { longitude, latitude } = position.coords;
-            const marker = playerMarker(players[0]);
             player1.setLngLat([ longitude, latitude ]);
           })
           .catch((err) => {
