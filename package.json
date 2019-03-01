@@ -2,6 +2,7 @@
   "name": "wicked-rails",
   "private": true,
   "dependencies": {
+    "@mapbox/mapbox-gl-directions": "^4.0.0",
     "@rails/webpacker": "3.5",
     "bootstrap": "3.4.0",
     "cocoon-js": "^0.0.5",
@@ -10,6 +11,7 @@
     "places.js": "^1.16.1"
   },
   "devDependencies": {
+    "ify-loader": "^1.1.0",
     "webpack-dev-server": "2.11.2"
   }
 }

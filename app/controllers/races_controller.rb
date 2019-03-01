@@ -12,6 +12,11 @@ class RacesController < ApplicationController
         lat: checkpoint.latitude
       }
     end
+    @players = [
+      {
+        image_url: helpers.asset_url('current-location.png')
+      }
+    ]
 
     redirect_to races_path if @checkpoints.size != @race.checkpoints.size
   end
