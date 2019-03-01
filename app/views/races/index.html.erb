@@ -13,6 +13,7 @@
           <td><%= race.starting_line.try(:location) %></td>
           <td><%= race.finish_line.try(:location) %></td>
           <td>
+            <%= link_to 'Show', race_path(race) %> |
             <%= link_to 'Edit', edit_race_path(race) %>
           </td>
         </tr>

@@ -6,6 +6,14 @@ class RacesController < ApplicationController
   end
 
   def show
+    @checkpoints = @race.checkpoints.map do |checkpoint|
+      {
+        lng: checkpoint.longitude,
+        lat: checkpoint.latitude
+      }
+    end
+
+    redirect_to races_path if @checkpoints.size != @race.checkpoints.size
   end
 
   def new
