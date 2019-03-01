@@ -85,7 +85,7 @@ const initMapbox = () => {
           .catch((err) => {
             console.error(err.message);
           });
-    }, 5000);
+    }, 1000);
 
     fitMapToMarkers(map, markers);
 
