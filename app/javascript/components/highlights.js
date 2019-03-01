@@ -95,7 +95,7 @@ const logSelection = (event) => {
   // const startPosition = selection.anchorOffset;
   // const endPosition = selection.focusOffset;
 
-  const selection = window.getSelection()
+  const selection = window.getSelection();
   const start = selection.getRangeAt(0).startContainer.parentNode;
   const end = selection.getRangeAt(0).endContainer.parentNode;
   const range = selection.getRangeAt(0);

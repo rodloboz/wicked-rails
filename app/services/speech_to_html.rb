@@ -16,8 +16,8 @@ class SpeechToHtml
   end
 
   def text_to_html
-    paragraphs.each_with_index.map do |p, i|
-      "<p data-index=#{i}>#{p}</p>"
+    paragraphs.each_with_index.map do |content, i|
+      "<p data-index=#{i}>#{content}</p>"
     end.join
   end
 end
