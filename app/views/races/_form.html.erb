@@ -1,0 +1,15 @@
+<%= simple_form_for @race do |form| %>
+  <%= form.input :name %>
+
+  <h3>Checkpoints</h3>
+  <div id="checkpoints">
+    <%= form.simple_fields_for :checkpoints do |checkpoint| %>
+      <%= render 'checkpoint_fields', form: checkpoint %>
+    <% end %>
+    <div class="links">
+      <%= link_to_add_association 'add checkpoint', form, :checkpoints, form_name: 'form' %>
+    </div>
+  </div>
+
+  <%= form.submit %>
+<% end %>

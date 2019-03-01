@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   resources :speeches, only: [:index, :show] do
     resources :contributions, only: :create
   end
+
+  resources :races
 end

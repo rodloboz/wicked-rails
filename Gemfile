@@ -17,6 +17,9 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 gem 'wicked'
+gem 'geocoder'
+gem 'acts_as_list'
+gem 'cocoon'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
