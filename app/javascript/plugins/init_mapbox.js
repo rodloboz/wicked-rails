@@ -12,14 +12,6 @@ function playerMarker(player) {
   return element;
 };
 
-function getLocation(callback) {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(callback);
-    } else {
-        // document.getElementById("asdfsdafsdaf").innerHTML = "Geolocation is not supported by this browser.";
-    }
-};
-
 function getPosition(options) {
   return new Promise(function (resolve, reject) {
     navigator.geolocation.getCurrentPosition(resolve, reject, options);
