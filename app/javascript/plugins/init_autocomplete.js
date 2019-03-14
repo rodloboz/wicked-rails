@@ -14,11 +14,13 @@ const initAutocomplete = () => {
       for(let mutation of mutationsList) {
           if (mutation.type == 'childList') {
             const node = mutation.addedNodes[0] //.querySelector('input');
-            const input = node.querySelector('input');
 
-            if (input) {
-              console.log('attach event')
-              // places({ container: input })
+            if (node !== undefined && node.tagName === 'DIV') {
+              const input = node.querySelector('input');
+
+              if (input) {
+                places({ container: input })
+              }
             }
           }
       }

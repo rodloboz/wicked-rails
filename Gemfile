@@ -20,6 +20,7 @@ gem 'wicked'
 gem 'geocoder'
 gem 'acts_as_list'
 gem 'cocoon'
+gem 'twilio-ruby'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

@@ -7,4 +7,8 @@ class User < ApplicationRecord
   def full_name
     "#{first_name} #{last_name}"
   end
+
+  def self.find_by_first_name(term)
+    User.where("first_name ILIKE ?", "#{term}%")
+  end
 end
